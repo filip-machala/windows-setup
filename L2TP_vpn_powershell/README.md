@@ -16,8 +16,8 @@ $ServerAddress = Read-Host -Prompt "Input server addressg. IP or address name"
 $Username = Read-Host -Prompt "Input username"
 $Password = Read-Host -Prompt "Input password"
 $PreSharedKey = Read-Host -Prompt "Input pre shared key"
-Add-VpnConnection -Name $name -ServerAddress $address -TunnelType L2tp -EncryptionLevel Required -AuthenticationMethod MSChapv2 -L2tpPsk $presharedkey -Force:$true -RememberCredential:$true -SplitTunneling:$false
-Set-VpnConnectionUsernamePassword -connectionname $name -username $username -password $plainpassword -domain ''
+Add-VpnConnection -Name $Name -ServerAddress $ServerAddress -TunnelType L2tp -EncryptionLevel Required -AuthenticationMethod MSChapv2 -L2tpPsk $PreSharedKey -Force:$true -RememberCredential:$true -SplitTunneling:$false
+Set-VpnConnectionUsernamePassword -connectionname $name -username $Username -password $Password -domain ''
 Write-Host "Connection added successfully." 
 ```
 
